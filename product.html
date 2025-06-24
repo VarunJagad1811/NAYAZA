@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APES Fusion Style Wireless Headphone | Nayaza</title>
+  <!-- Ionicons for header icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <style>
+    :root {
+      --spanish-gray: hsl(0, 0%, 60%);
+      --sonic-silver: hsl(0, 0%, 47%);
+      --eerie-black: hsl(0, 0%, 13%);
+      --salmon-pink: hsl(353, 100%, 78%);
+      --sandy-brown: hsl(29, 90%, 65%);
+      --bittersweet: hsl(0, 100%, 70%);
+      --ocean-green: hsl(152, 51%, 52%);
+      --davys-gray: hsl(0, 0%, 33%);
+      --cultured: hsl(0, 0%, 93%);
+      --white: hsl(0, 100%, 100%);
+      --onyx: hsl(0, 0%, 27%);
+      --fs-1: 1.563rem;
+      --fs-2: 1.375rem;
+      --fs-3: 1.25rem;
+      --fs-4: 1.125rem;
+      --fs-5: 1rem;
+      --fs-6: 0.938rem;
+      --fs-7: 0.875rem;
+      --fs-8: 0.813rem;
+      --fs-9: 0.75rem;
+      --fs-10: 0.688rem;
+      --fs-11: 0.625rem;
+      --weight-300: 300;
+      --weight-400: 400;
+      --weight-500: 500;
+      --weight-600: 600;
+      --weight-700: 700;
+      --border-radius-md: 10px;
+      --border-radius-sm: 5px;
+      --transition-timing: 0.2s ease;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    a { text-decoration: none; }
+    li { list-style: none; }
+    button {
+      background: none;
+      font: inherit;
+      border: none;
+      cursor: pointer;
+    }
+    img, ion-icon, button, a { display: block; }
+    span { display: inline-block; }
+    html { font-family: "Poppins", Arial, sans-serif; }
+    body { background: var(--white); color: #111; margin: 0; padding: 0; }
+
+    .container { padding: 0 15px; max-width: 1200px; margin: auto; }
+
+    /* Header Top */
+    .header-top {
+      display: block;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--cultured);
+    }
+    .header-top .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-social-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .header-social-container .social-link {
+      padding: 5px;
+      background: hsl(0, 0%, 95%);
+      border-radius: var(--border-radius-sm);
+      color: var(--sonic-silver);
+      transition: var(--transition-timing);
+    }
+    .header-social-container .social-link:hover {
+      background: var(--salmon-pink);
+      color: var(--white);
+    }
+    .header-alert-news {
+      color: var(--sonic-silver);
+      font-size: var(--fs-9);
+      text-transform: uppercase;
+    }
+    .header-alert-news b { font-weight: var(--weight-500); }
+    .header-top-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-top-actions select {
+      border: none;
+      min-width: 80px;
+      padding: 5px 0;
+      font: inherit;
+      color: var(--sonic-silver);
+      font-size: var(--fs-8);
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition-timing);
+    }
+    .header-top-actions select:hover { color: var(--eerie-black); }
+
+    /* Header Main */
+    .header-main {
+      padding: 25px 0;
+      border-bottom: 1px solid var(--cultured);
+    }
+    .header-main .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 80px;
+    }
+    .header-logo img { margin: auto; }
+    .header-search-container {
+      position: relative;
+      min-width: 300px;
+      flex-grow: 1;
+      display: flex;
+      border: 1px solid var(--cultured);
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      transition: border var(--transition-timing);
+    }
+    .header-search-container:focus-within {
+      border: 2px solid black;
+    }
+    .header-search-container .search-field {
+      font-size: var(--fs-7);
+      color: var(--onyx);
+      padding: 10px 15px;
+      border: none;
+      flex-grow: 1;
+      outline: none;
+    }
+    .search-btn {
+      background: var(--white);
+      color: var(--onyx);
+      font-size: 18px;
+      padding: 8px 15px;
+      border-radius: 0;
+      transition: color var(--transition-timing);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .search-btn:hover { color: var(--salmon-pink); }
+    .header-user-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .header-user-actions .action-btn {
+      position: relative;
+      font-size: 35px;
+      color: var(--onyx);
+      padding: 5px;
+    }
+    .header-user-actions .count {
+      position: absolute;
+      top: -2px;
+      right: -3px;
+      background: var(--bittersweet);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: var(--weight-500);
+      line-height: 1;
+      padding: 2px 4px;
+      border-radius: 20px;
+    }
+
+    /* Desktop Navigation */
+    .desktop-navigation-menu {
+      display: block;
+    }
+    .desktop-menu-category-list {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+    .desktop-menu-category-list .menu-category:not(:nth-child(2)) { position: relative; }
+    .desktop-menu-category-list .menu-category > .menu-title {
+      position: relative;
+      color: var(--onyx);
+      font-size: var(--fs-7);
+      font-weight: var(--weight-600);
+      text-transform: uppercase;
+      padding: 15px 0;
+      transition: var(--transition-timing);
+    }
+    .desktop-menu-category-list .menu-category > .menu-title:hover { color: var(--salmon-pink); }
+    .desktop-menu-category-list .menu-category > .menu-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--salmon-pink);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition-timing);
+    }
+    .desktop-menu-category-list .menu-category > .menu-title:hover::after { transform: scaleX(1); }
+    .dropdown-panel {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--white);
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      padding: 30px;
+      border: 1px solid var(--cultured);
+      box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
+      border-radius: var(--border-radius-md);
+      transform: translateY(50px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: var(--transition-timing);
+      z-index: 5;
+    }
+    .desktop-menu-category-list .menu-category:hover > .dropdown-panel {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    .dropdown-panel-list .menu-title a {
+      color: var(--onyx);
+      font-size: var(--fs-7);
+      font-weight: var(--weight-600);
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--cultured);
+      margin-bottom: 10px;
+    }
+    .panel-list-item a {
+      color: var(--sonic-silver);
+      font-size: var(--fs-7);
+      text-transform: capitalize;
+      transition: var(--transition-timing);
+    }
+    .panel-list-item a:hover { color: var(--salmon-pink); }
+    .panel-list-item:not(:last-child) a { padding: 4px 0; }
+    .panel-list-item:last-child { margin-top: 20px; }
+    .panel-list-item img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--border-radius-sm);
+    }
+    .dropdown-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 200px;
+      background: var(--white);
+      padding: 20px 0;
+      border-radius: var(--border-radius-md);
+      border: 1px solid var(--cultured);
+      box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
+      transform: translateY(50px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: var(--transition-timing);
+      z-index: 5;
+    }
+    .desktop-menu-category-list .menu-category:hover > .dropdown-list {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    .dropdown-list .dropdown-item a {
+      color: var(--sonic-silver);
+      font-size: var(--fs-7);
+      text-transform: capitalize;
+      padding: 4px 20px;
+      transition: var(--transition-timing);
+    }
+    .dropdown-list .dropdown-item a:hover { color: var(--salmon-pink); }
+
+    @media (max-width: 1023px) {
+      .desktop-navigation-menu { display: none; }
+      .header-top { display: none; }
+    }
+
+    /* --- Product Page Styles --- */
+    .container.product-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 30px auto 0 auto;
+    }
+    .left, .right {
+      flex: 1;
+      min-width: 300px;
+      padding: 10px;
+    }
+    .left img {
+      max-width: 100%;
+      transition: 0.3s ease-in-out;
+    }
+    .price {
+      color: #B12704;
+      font-size: 24px;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #555;
+      margin-left: 10px;
+    }
+    .offers, .about-item, .specs {
+      margin-top: 20px;
+    }
+    .about-item ul {
+      padding-left: 20px;
+    }
+
+    /* BUTTONS: Equal width, gap, and click effect */
+    .button-row {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .add-cart,
+    .buy-now {
+      flex: 1 1 0;
+      padding: 12px 0;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      transition: all 0.3s ease-in-out, box-shadow 0.1s;
+      min-width: 120px;
+      box-sizing: border-box;
+      font-weight: 600;
+    }
+    .add-cart {
+      background: #800080;
+      color: white;
+    }
+    .add-cart:hover,
+    .add-cart:active {
+      background: #a020f0;
+      box-shadow: 0 2px 8px rgba(128,0,128,0.15);
+      transform: translateY(1px) scale(0.98);
+    }
+    .buy-now {
+      background: #ff5f15;
+      color: white;
+    }
+    .buy-now:hover,
+    .buy-now:active {
+      background: #ff7f3f;
+      box-shadow: 0 2px 8px rgba(255,95,21,0.15);
+      transform: translateY(1px) scale(0.98);
+    }
+
+    .color-options {
+      margin: 15px 0;
+    }
+    .colors {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .color-dot {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .color-dot:hover {
+      transform: scale(1.1);
+    }
+    .color-dot.selected {
+      border: 3px solid black;
+    }
+    .black-grey { background: #333; }
+    .black { background: #000; }
+    .white { background: #fff; border: 2px solid #000; }
+    .blue { background: #1E90FF; }
+    .beige { background: #f5f5dc; }
+    .rating {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      margin: 8px 0;
+    }
+    .stars {
+      position: relative;
+      display: inline-block;
+      font-size: 32px;
+      color: #ccc;
+      line-height: 1;
+    }
+    .stars::before {
+      content: '★★★★★';
+    }
+    .stars::after {
+      content: '★★★★★';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #FFD700;
+      overflow: hidden;
+      width: 70%; /* 3.5 out of 5 */
+    }
+
+    /* --- Product Image Gallery Vertical --- */
+    .gallery-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .thumbnail-column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: border 0.2s;
+      background: #fff;
+    }
+    .thumbnail.selected,
+    .thumbnail:hover {
+      border: 2px solid #800080;
+    }
+    .main-img {
+      max-width: 390px;
+      max-height: 465px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      background: #fff;
+    }
+    @media (max-width: 900px) {
+      .gallery-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .main-img {
+        max-width: 100%;
+        max-height: 250px;
+      }
+      .thumbnail-column {
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+    }
+
+    /* --- New Sections --- */
+    .section-title {
+      font-size: 24px;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      color: #333;
+    }
+
+    /* Similar Products Section */
+    .similar-products {
+      margin: 40px 0;
+      padding: 0 20px;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .product-img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    .product-info {
+      padding: 15px;
+    }
+    .product-title {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 500;
+    }
+    .product-price {
+      font-size: 18px;
+      color: #B12704;
+      font-weight: 600;
+    }
+    .product-old-price {
+      text-decoration: line-through;
+      color: #777;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+    .product-discount {
+      color: #388e3c;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+    .product-rating {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+    }
+    .small-stars {
+      font-size: 16px;
+      position: relative;
+      color: #ccc;
+    }
+    .small-stars::before {
+      content: '★★★★★';
+    }
+    .small-stars::after {
+      content: '★★★★★';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #FFD700;
+      overflow: hidden;
+    }
+    .rating-count {
+      font-size: 12px;
+      color: #777;
+      margin-left: 5px;
+    }
+    .add-to-cart-btn {
+      width: 100%;
+      padding: 10px;
+      background: #f0c14b;
+      border: none;
+      border-radius: 4px;
+      color: #111;
+      font-weight: 600;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .add-to-cart-btn:hover {
+      background: #ddb347;
+    }
+
+    /* Customer Reviews Section */
+    .reviews-section {
+      margin: 40px 0;
+      padding: 0 20px;
+    }
+    .review-summary {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .overall-rating {
+      text-align: center;
+      margin-right: 30px;
+      min-width: 120px;
+    }
+    .rating-number {
+      font-size: 48px;
+      font-weight: 700;
+      color: #333;
+    }
+    .rating-stars {
+      font-size: 24px;
+      position: relative;
+      color: #ccc;
+    }
+    .rating-stars::before {
+      content: '★★★★★';
+    }
+    .rating-stars::after {
+      content: '★★★★★';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #FFD700;
+      overflow: hidden;
+      width: 70%;
+    }
+    .rating-count-total {
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+    .rating-bars {
+      flex-grow: 1;
+    }
+    .rating-bar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .star-label {
+      width: 80px;
+      font-size: 14px;
+      color: #555;
+    }
+    .bar-container {
+      flex-grow: 1;
+      height: 8px;
+      background: #e0e0e0;
+      border-radius: 4px;
+      margin: 0 10px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: #FFD700;
+      border-radius: 4px;
+    }
+    .bar-percentage {
+      width: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+    .write-review-btn {
+      padding: 10px 20px;
+      background: #800080;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .write-review-btn:hover {
+      background: #a020f0;
+    }
+    .reviews-list {
+      margin-top: 30px;
+    }
+    .review-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .reviewer-info {
+      display: flex;
+      align-items: center;
+    }
+    .reviewer-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #800080;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      margin-right: 15px;
+    }
+    .reviewer-name {
+      font-weight: 600;
+      color: #333;
+    }
+    .review-date {
+      font-size: 12px;
+      color: #777;
+      margin-top: 3px;
+    }
+    .review-rating {
+      font-size: 16px;
+      position: relative;
+      color: #ccc;
+    }
+    .review-rating::before {
+      content: '★★★★★';
+    }
+    .review-rating::after {
+      content: '★★★★★';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #FFD700;
+      overflow: hidden;
+    }
+    .review-content {
+      margin-top: 10px;
+      line-height: 1.5;
+      color: #333;
+    }
+    .review-images {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .review-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .review-image:hover {
+      transform: scale(1.05);
+    }
+    .review-helpful {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+    .helpful-btn {
+      background: none;
+      border: none;
+      color: #555;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+    }
+    .helpful-btn:hover {
+      color: #800080;
+    }
+    .helpful-icon {
+      margin-right: 5px;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      margin: 40px 0;
+      padding: 0 20px;
+    }
+    .faq-item {
+      margin-bottom: 15px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 15px 20px;
+      background: #f9f9f9;
+      font-weight: 600;
+      color: #333;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question:hover {
+      background: #f0f0f0;
+    }
+    .faq-answer {
+      padding: 15px 20px;
+      background: white;
+      color: #555;
+      line-height: 1.5;
+      display: none;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    .faq-toggle {
+      font-size: 20px;
+      color: #800080;
+    }
+
+    /* Warranty & Support Section */
+    .warranty-section {
+      margin: 40px 0;
+      padding: 0 20px;
+    }
+    .warranty-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .warranty-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .warranty-icon {
+      font-size: 40px;
+      color: #800080;
+      margin-bottom: 15px;
+    }
+    .warranty-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .warranty-desc {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Recently Viewed Section */
+    .recently-viewed {
+      margin: 40px 0;
+      padding: 0 20px;
+    }
+
+    /* Footer */
+  .footer-nav {
+    border-bottom: 1px solid var(--onyx);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+.footer-nav-list:not(:last-child) { margin-bottom: 20px; }
+
+.footer-nav .nav-title {
+  position: relative;
+  color: var(--white);
+  font-size: var(--fs-7);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.footer-nav .nav-title::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--salmon-pink);
+  width: 60px;
+  height: 1px;
+}
+
+.footer-nav-item { padding: 3px 0; }
+
+.footer-nav-link,
+.footer-nav-item .content {
+  width: max-content;
+  color: var(--sonic-silver);
+  font-size: var(--fs-7);
+  text-transform: capitalize;
+  transition: var(--transition-timing);
+}
+
+  .footer-nav-link:hover { color: var(--salmon-pink); }
+
+  .footer-nav-item.flex {
+  display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .footer-nav-item .content {
+  font-style: normal;
+    margin-bottom: 5px;
+  }
+  
+  .footer-nav-item .icon-box {
+    color: var(--sonic-silver);
+    font-size: 25px;
+  }
+
+  .footer-nav-item .icon-box ion-icon { --ion icon-stroke-width: 30px; }
+
+  .footer-nav .social-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .social-link .footer-nav-link { font-size: 25px; }
+  
+  .footer-bottom {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .payment-img {
+  max-width: 335px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  
+  .copyright {
+    color: var(--sonic-silver);
+    font-size: var(--fs-8);
+    font-weight: var(--weight-500);
+    text-transform: capitalize;
+    letter-spacing: 1.2px;
+  }
+  
+  .copyright a {
+    display: inline;
+    color: inherit;
+  }
+  
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+footer {
+  background: var(--eerie-black);
+  padding: 30px 0;
+}
+
+.footer-category {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--onyx);
+}
+
+.footer-category-title {
+  color: var(--salmon-pink);
+  font-size: var(--fs-6);
+  font-weight: var(--weight-600);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.footer-category-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 3px;
+  margin-bottom: 15px;
+}
+
+.category-box-title {
+  color: var(--spanish-gray);
+  font-size: var(--fs-8);
+  font-weight: var(--weight-600);
+  text-transform: uppercase;
+}
+
+.footer-category-link {
+  position: relative;
+  color: var(--sonic-silver);
+  font-size: var(--fs-7);
+  text-transform: capitalize;
+  -webkit-transition: var(--transition-timing);
+  -o-transition: var(--transition-timing);
+  transition: var(--transition-timing);
+}
+
+.footer-category-link:hover { color: var(--spanish-gray); }
+
+.footer-category-link:not(:last-child)::after {
+  position: absolute;
+  content: '';
+  top: 3px;
+  right: -10px;
+  background: var(--sonic-silver);
+  width: 1px;
+  height: 15px;
+}
+
+
+/**
+ * footer nav 
+ */
+
+.footer-nav {
+  border-bottom: 1px solid var(--onyx);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-nav-list:not(:last-child) { margin-bottom: 20px; }
+
+.footer-nav .nav-title {
+  position: relative;
+  color: var(--white);
+  font-size: var(--fs-7);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.footer-nav .nav-title::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--salmon-pink);
+  width: 60px;
+  height: 1px;
+}
+
+.footer-nav-item { padding: 3px 0; }
+
+.footer-nav-link,
+.footer-nav-item .content {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--sonic-silver);
+  font-size: var(--fs-7);
+  text-transform: capitalize;
+  -webkit-transition: var(--transition-timing);
+  -o-transition: var(--transition-timing);
+  transition: var(--transition-timing);
+}
+
+.footer-nav-link:hover { color: var(--salmon-pink); }
+
+.footer-nav-item.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-nav-item .content {
+  font-style: normal;
+  margin-bottom: 5px;
+}
+
+.footer-nav-item .icon-box {
+  color: var(--sonic-silver);
+  font-size: 25px;
+}
+
+.footer-nav-item .icon-box ion-icon { --ionicon-stroke-width: 30px; }
+
+.footer-nav .social-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.social-link .footer-nav-link { font-size: 25px; }
+
+.footer-bottom {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.payment-img {
+  max-width: 335px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.copyright {
+  color: var(--sonic-silver);
+  font-size: var(--fs-8);
+  font-weight: var(--weight-500);
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+}
+
+.copyright a {
+  display: inline;
+  color: inherit;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+        <div class="header-alert-news">
+          <p>
+            <b>Free Shipping</b>
+            This Week Order Over - ₹699
+          </p>
+        </div>
+        <div class="header-top-actions">
+          <select name="currency">
+            <option value="inr">INR &#8377;</option>
+            <option value="usd">USD &dollar;</option>
+          </select>
+          <select name="language">
+            <option value="en-US">English</option>
+            <option value="es-ES">Espa&ntilde;ol</option>
+            <option value="fr">Fran&ccedil;ais</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container">
+        <a href="#" class="header-logo">
+          <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\logo\Nayaza logo.jpeg" alt="Nayaza's logo" width="165" height="80">
+        </a>
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <button class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+        </div>
+        <div class="header-user-actions">
+          <button class="action-btn"><ion-icon name="person-outline"></ion-icon></button>
+          <button class="action-btn"><ion-icon name="heart-outline"></ion-icon><span class="count">0</span></button>
+          <button class="action-btn"><ion-icon name="bag-handle-outline"></ion-icon><span class="count">0</span></button>
+        </div>
+      </div>
+    </div>
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category"><a href="#" class="menu-title">Home</a></li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Categories</a>
+            <div class="dropdown-panel">
+              <ul class="dropdown-panel-list">
+                <li class="menu-title"><a href="#">Electronics</a></li>
+                <li class="panel-list-item"><a href="#">Desktop</a></li>
+                <li class="panel-list-item"><a href="#">Laptop</a></li>
+                <li class="panel-list-item"><a href="#">Camera</a></li>
+                <li class="panel-list-item"><a href="#">Tablet</a></li>
+                <li class="panel-list-item"><a href="#">Headphone</a></li>
+                <li class="panel-list-item"><a href="#"><img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\electronics-banner-1.jpg" alt="headphone collection" width="250" height="119"></a></li>
+              </ul>
+              <ul class="dropdown-panel-list">
+                <li class="menu-title"><a href="#">Men's</a></li>
+                <li class="panel-list-item"><a href="#">Formal</a></li>
+                <li class="panel-list-item"><a href="#">Casual</a></li>
+                <li class="panel-list-item"><a href="#">Sports</a></li>
+                <li class="panel-list-item"><a href="#">Jacket</a></li>
+                <li class="panel-list-item"><a href="#">Sunglasses</a></li>
+                <li class="panel-list-item"><a href="#"><img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\mens-banner.jpg" alt="men's fashion" width="250" height="119"></a></li>
+              </ul>
+              <ul class="dropdown-panel-list">
+                <li class="menu-title"><a href="#">Women's</a></li>
+                <li class="panel-list-item"><a href="#">Formal</a></li>
+                <li class="panel-list-item"><a href="#">Casual</a></li>
+                <li class="panel-list-item"><a href="#">Perfume</a></li>
+                <li class="panel-list-item"><a href="#">Cosmetics</a></li>
+                <li class="panel-list-item"><a href="#">Bags</a></li>
+                <li class="panel-list-item"><a href="#"><img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\womens-banner.jpg" alt="women's fashion" width="250" height="119"></a></li>
+              </ul>
+              <ul class="dropdown-panel-list">
+                <li class="menu-title"><a href="#">Electronics</a></li>
+                <li class="panel-list-item"><a href="#">Smart Watch</a></li>
+                <li class="panel-list-item"><a href="#">Smart TV</a></li>
+                <li class="panel-list-item"><a href="#">Keyboard</a></li>
+                <li class="panel-list-item"><a href="#">Mouse</a></li>
+                <li class="panel-list-item"><a href="#">Microphone</a></li>
+                <li class="panel-list-item"><a href="#"><img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\electronics-banner-2.jpg" alt="mouse collection" width="250" height="119"></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Men's</a>
+            <ul class="dropdown-list">
+              <li class="dropdown-item"><a href="#">Shirt</a></li>
+              <li class="dropdown-item"><a href="#">Shorts & Jeans</a></li>
+              <li class="dropdown-item"><a href="#">Safety Shoes</a></li>
+              <li class="dropdown-item"><a href="#">Wallet</a></li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Women's</a>
+            <ul class="dropdown-list">
+              <li class="dropdown-item"><a href="#">Dress & Frock</a></li>
+              <li class="dropdown-item"><a href="#">Earrings</a></li>
+              <li class="dropdown-item"><a href="#">Necklace</a></li>
+              <li class="dropdown-item"><a href="#">Makeup Kit</a></li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Jewelry</a>
+            <ul class="dropdown-list">
+              <li class="dropdown-item"><a href="#">Earrings</a></li>
+              <li class="dropdown-item"><a href="#">Couple Rings</a></li>
+              <li class="dropdown-item"><a href="#">Necklace</a></li>
+              <li class="dropdown-item"><a href="#">Bracelets</a></li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <a href="#" class="menu-title">Perfume</a>
+            <ul class="dropdown-list">
+              <li class="dropdown-item"><a href="#">Clothes Perfume</a></li>
+              <li class="dropdown-item"><a href="#">Deodorant</a></li>
+              <li class="dropdown-item"><a href="#">Flower Fragrance</a></li>
+              <li class="dropdown-item"><a href="#">Air Freshener</a></li>
+            </ul>
+          </li>
+          <li class="menu-category"><a href="#" class="menu-title">Blog</a></li>
+          <li class="menu-category"><a href="#" class="menu-title">Hot Offers</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Product Content -->
+  <div class="container product-container">
+    <div class="left">
+      <div class="gallery-container">
+        <div class="thumbnail-column">
+          <img class="thumbnail selected" src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\Headphne.png" alt="Black Grey" />
+          <img class="thumbnail" src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone1.png" alt="Black" />
+          <img class="thumbnail" src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone2.png" alt="White" />
+          <img class="thumbnail" src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone3.png" alt="Blue" />
+          <img class="thumbnail" src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone4.png" alt="Beige" />
+        </div>
+        <img id="main-product-img" class="main-img" src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\Headphne.png" alt="APES Fusion Headphone" />
+      </div>
+    </div>
+    <div class="right">
+      <h2>APES Fusion Style Wireless Headphone, 40mm Dynamic Drivers, 50Hrs Playtime, Fast Charge (Black Grey)</h2>
+      <div class="rating">
+        <div class="stars"></div>
+        <span style="margin-left: 10px;">3.5 out of 5</span>
+      </div>
+      <div class="color-options">
+        <strong>Colour:</strong> Black Grey
+        <div class="colors">
+          <div class="color-dot black-grey selected" title="Black Grey"></div>
+          <div class="color-dot black" title="Black"></div>
+          <div class="color-dot white" title="White"></div>
+          <div class="color-dot blue" title="Blue"></div>
+          <div class="color-dot beige" title="Beige"></div>
+        </div>
+      </div>
+      <p class="price">₹1,899 <span class="old-price">₹7,199</span> <span style="color: green">-73%</span></p>
+      <p>Inclusive of all taxes</p>
+      <div class="button-row">
+        <button class="add-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+      <div class="specs">
+        <p><strong>Brand:</strong> APES</p>
+        <p><strong>Colour:</strong> Black Grey</p>
+        <p><strong>Ear Placement:</strong> On Ear</p>
+        <p><strong>Form Factor:</strong> On Ear</p>
+        <p><strong>Noise Control:</strong> Sound Isolation</p>
+      </div>
+      <div class="about-item">
+        <h3>About this item</h3>
+        <ul>
+          <li>Memory foam + Sweatproof fabric Earcups, Fit and comfort. Detachable fabric ear-cap for washable.</li>
+          <li>Low-power consumption technology applied, headphones with built-in 500mAh battery can continually play more than 50 hours.</li>
+          <li>PlayBack: Stay connected to your playlist for mammoth durations, with up to 50 hours of playtime, and 400 hours standby time.</li>
+          <li>Drivers: Enliven your senses with crystal clear sound reproduction via 45mm drivers, delivering acoustic sound experience.</li>
+          <li>Controls: It's easy to access controls helps you in controlling playback, wake up default voice assistant and attend calls.</li>
+          <li>MUSIC ENHANCED: 40mm dynamic speakers with high-end Bluetooth V5.3 perfectly guarantees high fidelity sound.</li>
+          <li>With Removable Earmuffs, fashionable design, and unique Volume + and - buttons.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Similar Products Section -->
+  <div class="similar-products">
+    <h2 class="section-title">Similar Products</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone1.png" alt="Wireless Headphones" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">APES Fusion Pro Wireless Headphones</h3>
+          <div class="product-price">₹2,499 <span class="product-old-price">₹5,999</span> <span class="product-discount">-58%</span></div>
+          <div class="product-rating">
+            <div class="small-stars" style="width: 80%;"></div>
+            <span class="rating-count">(1,234)</span>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone2.png" alt="Noise Cancelling Headphones" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">APES Noise Cancelling Headphones</h3>
+          <div class="product-price">₹3,299 <span class="product-old-price">₹6,999</span> <span class="product-discount">-53%</span></div>
+          <div class="product-rating">
+            <div class="small-stars" style="width: 90%;"></div>
+            <span class="rating-count">(2,567)</span>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone3.png" alt="Bluetooth Headphones" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">APES Bluetooth Over-Ear Headphones</h3>
+          <div class="product-price">₹1,799 <span class="product-old-price">₹4,499</span> <span class="product-discount">-60%</span></div>
+          <div class="product-rating">
+            <div class="small-stars" style="width: 70%;"></div>
+            <span class="rating-count">(987)</span>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone4.png" alt="Gaming Headphones" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">APES Gaming Headset with Mic</h3>
+          <div class="product-price">₹2,999 <span class="product-old-price">₹5,499</span> <span class="product-discount">-45%</span></div>
+          <div class="product-rating">
+            <div class="small-stars" style="width: 85%;"></div>
+            <span class="rating-count">(3,456)</span>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Customer Reviews Section -->
+  <div class="reviews-section">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="review-summary">
+      <div class="overall-rating">
+        <div class="rating-number">3.5</div>
+        <div class="rating-stars"></div>
+        <div class="rating-count-total">Based on 1,234 reviews</div>
+      </div>
+      <div class="rating-bars">
+        <div class="rating-bar">
+          <div class="star-label">5 stars</div>
+          <div class="bar-container">
+            <div class="bar-fill" style="width: 60%;"></div>
+          </div>
+          <div class="bar-percentage">60%</div>
+        </div>
+        <div class="rating-bar">
+          <div class="star-label">4 stars</div>
+          <div class="bar-container">
+            <div class="bar-fill" style="width: 20%;"></div>
+          </div>
+          <div class="bar-percentage">20%</div>
+        </div>
+        <div class="rating-bar">
+          <div class="star-label">3 stars</div>
+          <div class="bar-container">
+            <div class="bar-fill" style="width: 10%;"></div>
+          </div>
+          <div class="bar-percentage">10%</div>
+        </div>
+        <div class="rating-bar">
+          <div class="star-label">2 stars</div>
+          <div class="bar-container">
+            <div class="bar-fill" style="width: 5%;"></div>
+          </div>
+          <div class="bar-percentage">5%</div>
+        </div>
+        <div class="rating-bar">
+          <div class="star-label">1 star</div>
+          <div class="bar-container">
+            <div class="bar-fill" style="width: 5%;"></div>
+          </div>
+          <div class="bar-percentage">5%</div>
+        </div>
+      </div>
+      <button class="write-review-btn">Write a Review</button>
+    </div>
+    <div class="reviews-list">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">RS</div>
+            <div>
+              <div class="reviewer-name">Rahul Sharma</div>
+              <div class="review-date">Reviewed on 15 March 2023</div>
+            </div>
+          </div>
+          <div class="review-rating" style="width: 80%;"></div>
+        </div>
+        <div class="review-content">
+          <p>Great headphones for the price! The sound quality is impressive and the battery life is as advertised. Comfortable for long listening sessions.</p>
+        </div>
+        <div class="review-images">
+          <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone1.png" alt="Review image" class="review-image">
+          <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone2.png" alt="Review image" class="review-image">
+        </div>
+        <div class="review-helpful">
+          <button class="helpful-btn"><ion-icon name="thumbs-up-outline" class="helpful-icon"></ion-icon> Helpful (24)</button>
+          <button class="helpful-btn"><ion-icon name="thumbs-down-outline" class="helpful-icon"></ion-icon> Not Helpful (2)</button>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">PK</div>
+            <div>
+              <div class="reviewer-name">Priya Kumar</div>
+              <div class="review-date">Reviewed on 5 February 2023</div>
+            </div>
+          </div>
+          <div class="review-rating" style="width: 60%;"></div>
+        </div>
+        <div class="review-content">
+          <p>Decent headphones but the ear cushions could be more comfortable. Sound quality is good for the price range. Battery life is excellent.</p>
+        </div>
+        <div class="review-helpful">
+          <button class="helpful-btn"><ion-icon name="thumbs-up-outline" class="helpful-icon"></ion-icon> Helpful (12)</button>
+          <button class="helpful-btn"><ion-icon name="thumbs-down-outline" class="helpful-icon"></ion-icon> Not Helpful (0)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-section">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What is the warranty period for these headphones?</span>
+        <ion-icon name="chevron-down-outline" class="faq-toggle"></ion-icon>
+      </div>
+      <div class="faq-answer">
+        <p>These headphones come with a 1-year manufacturer warranty covering any manufacturing defects. The warranty does not cover physical damage or water damage.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How long does the battery last on a single charge?</span>
+        <ion-icon name="chevron-down-outline" class="faq-toggle"></ion-icon>
+      </div>
+      <div class="faq-answer">
+        <p>The APES Fusion Style Wireless Headphones provide up to 50 hours of continuous playback on a single charge with volume at 50%. Battery life may vary based on usage patterns and volume levels.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Do these headphones support fast charging?</span>
+        <ion-icon name="chevron-down-outline" class="faq-toggle"></ion-icon>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, these headphones support fast charging. A 10-minute charge provides approximately 5 hours of playback time. A full charge takes about 2 hours.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Are the ear cushions replaceable?</span>
+        <ion-icon name="chevron-down-outline" class="faq-toggle"></ion-icon>
+      </div>
+      <div class="faq-answer">
+        <p>Yes, the ear cushions are detachable and replaceable. Replacement cushions are available for purchase separately on our website.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Warranty & Support Section -->
+  <div class="warranty-section">
+    <h2 class="section-title">Warranty & Support</h2>
+    <div class="warranty-cards">
+      <div class="warranty-card">
+        <ion-icon name="shield-checkmark-outline" class="warranty-icon"></ion-icon>
+        <h3 class="warranty-title">1 Year Warranty</h3>
+        <p class="warranty-desc">Coverage for manufacturing defects and hardware malfunctions from the date of purchase.</p>
+      </div>
+      <div class="warranty-card">
+        <ion-icon name="refresh-outline" class="warranty-icon"></ion-icon>
+        <h3 class="warranty-title">Easy Returns</h3>
+        <p class="warranty-desc">30-day return policy for unused products in original packaging.</p>
+      </div>
+      <div class="warranty-card">
+        <ion-icon name="headset-outline" class="warranty-icon"></ion-icon>
+        <h3 class="warranty-title">Customer Support</h3>
+        <p class="warranty-desc">24/7 customer support via phone, email, and live chat for any product-related queries.</p>
+      </div>
+      <div class="warranty-card">
+        <ion-icon name="location-outline" class="warranty-icon"></ion-icon>
+        <h3 class="warranty-title">Service Centers</h3>
+        <p class="warranty-desc">Nationwide network of authorized service centers for warranty claims and repairs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recently Viewed Section -->
+  <div class="recently-viewed">
+    <h2 class="section-title">Recently Viewed</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone1.png" alt="Wireless Earbuds" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">APES Wireless Earbuds Pro</h3>
+          <div class="product-price">₹1,599 <span class="product-old-price">₹3,999</span> <span class="product-discount">-60%</span></div>
+          <div class="product-rating">
+            <div class="small-stars" style="width: 80%;"></div>
+            <span class="rating-count">(2,345)</span>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone2.png" alt="Bluetooth Speaker" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">APES Portable Bluetooth Speaker</h3>
+          <div class="product-price">₹2,199 <span class="product-old-price">₹4,999</span> <span class="product-discount">-56%</span></div>
+          <div class="product-rating">
+            <div class="small-stars" style="width: 85%;"></div>
+            <span class="rating-count">(1,876)</span>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone3.png" alt="Neckband Earphones" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">APES Neckband Wireless Earphones</h3>
+          <div class="product-price">₹999 <span class="product-old-price">₹2,499</span> <span class="product-discount">-60%</span></div>
+          <div class="product-rating">
+            <div class="small-stars" style="width: 75%;"></div>
+            <span class="rating-count">(3,210)</span>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\products\headphone4.png" alt="Wired Headphones" class="product-img">
+        <div class="product-info">
+          <h3 class="product-title">APES Wired Studio Headphones</h3>
+          <div class="product-price">₹1,299 <span class="product-old-price">₹2,999</span> <span class="product-discount">-57%</span></div>
+          <div class="product-rating">
+            <div class="small-stars" style="width: 90%;"></div>
+            <span class="rating-count">(1,543)</span>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-category">
+
+      <div class="container">
+
+        <h2 class="footer-category-title">Brand directory</h2>
+
+        <div class="footer-category-box">
+
+          <h3 class="category-box-title">Fashion :</h3>
+
+          <a href="#" class="footer-category-link">T-shirt</a>
+          <a href="#" class="footer-category-link">Shirts</a>
+          <a href="#" class="footer-category-link">shorts & jeans</a>
+          <a href="#" class="footer-category-link">jacket</a>
+          <a href="#" class="footer-category-link">dress & frock</a>
+          <a href="#" class="footer-category-link">innerwear</a>
+          <a href="#" class="footer-category-link">hosiery</a>
+
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">footwear :</h3>
+        
+          <a href="#" class="footer-category-link">sport</a>
+          <a href="#" class="footer-category-link">formal</a>
+          <a href="#" class="footer-category-link">Boots</a>
+          <a href="#" class="footer-category-link">casual</a>
+          <a href="#" class="footer-category-link">cowboy shoes</a>
+          <a href="#" class="footer-category-link">safety shoes</a>
+          <a href="#" class="footer-category-link">Party wear shoes</a>
+          <a href="#" class="footer-category-link">Branded</a>
+          <a href="#" class="footer-category-link">Firstcopy</a>
+          <a href="#" class="footer-category-link">Long shoes</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">jewellery :</h3>
+        
+          <a href="#" class="footer-category-link">Necklace</a>
+          <a href="#" class="footer-category-link">Earrings</a>
+          <a href="#" class="footer-category-link">Couple rings</a>
+          <a href="#" class="footer-category-link">Pendants</a>
+          <a href="#" class="footer-category-link">Crystal</a>
+          <a href="#" class="footer-category-link">Bangles</a>
+          <a href="#" class="footer-category-link">bracelets</a>
+          <a href="#" class="footer-category-link">nosepin</a>
+          <a href="#" class="footer-category-link">chain</a>
+          <a href="#" class="footer-category-link">Earrings</a>
+          <a href="#" class="footer-category-link">Couple rings</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">cosmetics :</h3>
+        
+          <a href="#" class="footer-category-link">Shampoo</a>
+          <a href="#" class="footer-category-link">Bodywash</a>
+          <a href="#" class="footer-category-link">Facewash</a>
+          <a href="#" class="footer-category-link">makeup kit</a>
+          <a href="#" class="footer-category-link">liner</a>
+          <a href="#" class="footer-category-link">lipstick</a>
+          <a href="#" class="footer-category-link">prefume</a>
+          <a href="#" class="footer-category-link">Body soap</a>
+          <a href="#" class="footer-category-link">scrub</a>
+          <a href="#" class="footer-category-link">hair gel</a>
+          <a href="#" class="footer-category-link">hair colors</a>
+          <a href="#" class="footer-category-link">hair dye</a>
+          <a href="#" class="footer-category-link">sunscreen</a>
+          <a href="#" class="footer-category-link">skin loson</a>
+          <a href="#" class="footer-category-link">liner</a>
+          <a href="#" class="footer-category-link">lipstick</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Popular Categories</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Fashion</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Electronic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Cosmetic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Health</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Watches</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Products</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Our Company</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Legal Notice</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Terms and conditions</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">About us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Secure payment</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Services</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              B-1508 BKC,
+              Bandra, Mumbai-51, Maharashtra, India
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+91-90047-21077" class="footer-nav-link">+91-90047-21077</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:nayaza@gmail.com" class="footer-nav-link">nayaza@gmail.com</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <img src="C:\Users\VARUN\Downloads\NAYAZA\assets\images\pay.png"  alt="payment method" class="payment-img">
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">Nayaza</a> all rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+
+
+  <script>
+    // Product image gallery functionality
+    const mainImg = document.getElementById('main-product-img');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        mainImg.src = this.src;
+        thumbnails.forEach(t => t.classList.remove('selected'));
+        this.classList.add('selected');
+      });
+    });
+
+    // FAQ toggle functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+        
+        // Toggle icon
+        const icon = question.querySelector('.faq-toggle');
+        if (item.classList.contains('active')) {
+          icon.setAttribute('name', 'chevron-up-outline');
+        } else {
+          icon.setAttribute('name', 'chevron-down-outline');
+        }
+      });
+    });
+
+    // Color selection functionality
+    const colorDots = document.querySelectorAll('.color-dot');
+    colorDots.forEach(dot => {
+      dot.addEventListener('click', function() {
+        colorDots.forEach(d => d.classList.remove('selected'));
+        this.classList.add('selected');
+        
+        // Update color text
+        const colorText = this.closest('.color-options').querySelector('strong');
+        colorText.nextSibling.textContent = ' ' + this.getAttribute('title');
+      });
+    });
+  </script>
+</body>
+</html>
